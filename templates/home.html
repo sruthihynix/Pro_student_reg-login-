@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Home Page</title>
+
+</head>
+<body>
+<a href="{% url 'registration' %}">Registration Page</a>
+<h1> Welcome to Home page</h1>
+<a href="{% url 'show' %}">Registered Students</a><br><br>
+<!-- <input type="submit"  class="btn btn-primary" name="submit" value="logout"><br>-->
+<!--<a href="{% url 'logout' %}">logout</a>-->
+  <a href="{% url 'registration' %}" class="btn btn-primary" style="padding: 10px; background-color: blue; color: white; border-radius: 5px;">Logout</a>
+</body>
+</html>
