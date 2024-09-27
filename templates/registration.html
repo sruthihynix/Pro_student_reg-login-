@@ -5,11 +5,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<!--ajax-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
-	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
-
     <title>Regristration</title>
 </head>
 <body>
@@ -35,8 +30,9 @@
     <br><br>
 
     <input type="submit" name="register" value="Register"><br>
-     <input type="submit"  class="btn btn-primary" name="submit" value="Login"><br>
 
+<!--    <input type="submit"  class="btn btn-primary" name="submit" value="Login"><br>-->
+    <a href="{% url 'log_btn' %}">Login Page</a>
 </form>
 </body>
 </html>

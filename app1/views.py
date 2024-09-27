@@ -3,7 +3,7 @@ from app1.models import Student_Info
 from django.http import HttpResponse
 
 # Create your views here.
-
+# to register the student details to the db
 def reg_page(request):
     if request.method == 'POST':
 # extract form data
@@ -20,7 +20,7 @@ def reg_page(request):
         student_info = Student_Info(
                             s_name=name,
                             username=username,
-                            password=password1
+                            password=password1,
                          )
         student_info.save()
 # REDIRECT TO HOME PAGE AFTER REGISTERING
@@ -37,8 +37,6 @@ def login_page(request):
         # username = request.POST.get('uname')
         username=request.POST['uname']
         password = request.POST.get('pwd')
-        # print(f"Entered username: {username}")
-    # Check if any field is empty
 
 # Check if the user exists in the database
         try:
@@ -62,6 +60,7 @@ def show_students(request):
     print("students")
     students = Student_Info.objects.all()
     t=students.count()
-    print(t)
-    # print(f"Number of students found: {students.count()}")  # Debugging line
+    # print(t)
     return render(request,'show.html',{'students':students})
+def log_btn(request):
+    return redirect('login')
